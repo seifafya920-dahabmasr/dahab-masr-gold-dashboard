@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { mockCompanies } from "@/data/mockData";
 
-const tokensExample = `{
+const tokensSuccessExample = `{
   "status": "success",
   "data": {
     "accesstoken": "",
@@ -14,7 +14,12 @@ const tokensExample = `{
   "error": null
 }`;
 
-const pricesExample = `{
+const tokensErrorExample = `{
+  "status": "fail",
+  "error": "invalid external ID"
+}`;
+
+const pricesSuccessExample = `{
   "status": "success",
   "data": {
     "gold": {
@@ -29,16 +34,26 @@ const pricesExample = `{
   "error": null
 }`;
 
+const pricesErrorExample = `{
+  "status": "fail",
+  "error": "token expired"
+}`;
+
 const regenerateBodyExample = `{
   "token": "Bearer <refreshtoken>"
 }`;
 
-const regenerateResponseExample = `{
+const regenerateSuccessExample = `{
   "status": "success",
   "data": {
     "accesstoken": ""
   },
   "error": null
+}`;
+
+const regenerateErrorExample = `{
+  "status": "fail",
+  "error": "invalid or missing refresh token"
 }`;
 
 const Documentation = () => {
@@ -129,23 +144,51 @@ const Documentation = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <p className="text-sm font-body font-medium">
-                Response Example
-              </p>
+            <div className="space-y-1">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-body font-medium">
+                  ✔ Success Response
+                </p>
+                <span className="text-xs font-body text-muted-foreground">
+                  Status Code: 200
+                </span>
+              </div>
               <Button
                 type="button"
                 variant="outline"
                 size="sm"
-                onClick={() => handleCopy(tokensExample)}
+                onClick={() => handleCopy(tokensSuccessExample)}
               >
                 <CopyIcon className="w-4 h-4 mr-2" />
                 Copy JSON
               </Button>
+              <pre className="mt-1 rounded-md border border-border bg-muted/40 p-4 font-mono text-xs overflow-x-auto">
+                <code>{tokensSuccessExample}</code>
+              </pre>
             </div>
-            <pre className="mt-1 rounded-md border border-border bg-muted/40 p-4 font-mono text-xs overflow-x-auto">
-              <code>{tokensExample}</code>
-            </pre>
+
+            <div className="space-y-1 pt-4">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-body font-medium">
+                  ❌ Error Response
+                </p>
+                <span className="text-xs font-body text-muted-foreground">
+                  Status Code: 404
+                </span>
+              </div>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => handleCopy(tokensErrorExample)}
+              >
+                <CopyIcon className="w-4 h-4 mr-2" />
+                Copy JSON
+              </Button>
+              <pre className="mt-1 rounded-md border border-border bg-muted/40 p-4 font-mono text-xs overflow-x-auto">
+                <code>{tokensErrorExample}</code>
+              </pre>
+            </div>
           </div>
         </CardContent>
       </Card>
@@ -169,23 +212,50 @@ const Documentation = () => {
             </div>
           </div>
           <div className="space-y-2">
-            <div className="flex items-center justify-between">
-              <p className="text-sm font-body font-medium">
-                Response Example
-              </p>
+            <div className="space-y-1">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-body font-medium">
+                  ✔ Success Response
+                </p>
+                <span className="text-xs font-body text-muted-foreground">
+                  Status Code: 200
+                </span>
+              </div>
               <Button
                 type="button"
                 variant="outline"
                 size="sm"
-                onClick={() => handleCopy(pricesExample)}
+                onClick={() => handleCopy(pricesSuccessExample)}
               >
                 <CopyIcon className="w-4 h-4 mr-2" />
                 Copy JSON
               </Button>
+              <pre className="mt-1 rounded-md border border-border bg-muted/40 p-4 font-mono text-xs overflow-x-auto">
+                <code>{pricesSuccessExample}</code>
+              </pre>
             </div>
-            <pre className="mt-1 rounded-md border border-border bg-muted/40 p-4 font-mono text-xs overflow-x-auto">
-              <code>{pricesExample}</code>
-            </pre>
+            <div className="space-y-1 pt-4">
+              <div className="flex items-center justify-between">
+                <p className="text-sm font-body font-medium">
+                  ❌ Error Response
+                </p>
+                <span className="text-xs font-body text-muted-foreground">
+                  Status Code: 401
+                </span>
+              </div>
+              <Button
+                type="button"
+                variant="outline"
+                size="sm"
+                onClick={() => handleCopy(pricesErrorExample)}
+              >
+                <CopyIcon className="w-4 h-4 mr-2" />
+                Copy JSON
+              </Button>
+              <pre className="mt-1 rounded-md border border-border bg-muted/40 p-4 font-mono text-xs overflow-x-auto">
+                <code>{pricesErrorExample}</code>
+              </pre>
+            </div>
           </div>
         </CardContent>
       </Card>
@@ -226,23 +296,48 @@ const Documentation = () => {
               <code>{regenerateBodyExample}</code>
             </pre>
           </div>
-          <div className="space-y-2">
+          <div className="space-y-1 pt-2">
             <div className="flex items-center justify-between">
               <p className="text-sm font-body font-medium">
-                Example Response
+                ✔ Success Response
               </p>
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                onClick={() => handleCopy(regenerateResponseExample)}
-              >
-                <CopyIcon className="w-4 h-4 mr-2" />
-                Copy JSON
-              </Button>
+              <span className="text-xs font-body text-muted-foreground">
+                Status Code: 200
+              </span>
             </div>
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={() => handleCopy(regenerateSuccessExample)}
+            >
+              <CopyIcon className="w-4 h-4 mr-2" />
+              Copy JSON
+            </Button>
             <pre className="mt-1 rounded-md border border-border bg-muted/40 p-4 font-mono text-xs overflow-x-auto">
-              <code>{regenerateResponseExample}</code>
+              <code>{regenerateSuccessExample}</code>
+            </pre>
+          </div>
+          <div className="space-y-1">
+            <div className="flex items-center justify-between">
+              <p className="text-sm font-body font-medium">
+                ❌ Error Response
+              </p>
+              <span className="text-xs font-body text-muted-foreground">
+                Status Code: 400
+              </span>
+            </div>
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              onClick={() => handleCopy(regenerateErrorExample)}
+            >
+              <CopyIcon className="w-4 h-4 mr-2" />
+              Copy JSON
+            </Button>
+            <pre className="mt-1 rounded-md border border-border bg-muted/40 p-4 font-mono text-xs overflow-x-auto">
+              <code>{regenerateErrorExample}</code>
             </pre>
           </div>
         </CardContent>
