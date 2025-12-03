@@ -172,4 +172,30 @@
   .gold-glow {
     box-shadow: 0 0 30px hsl(43 66% 55% / 0.2);
   }
+
+  @media print {
+    body * {
+      visibility: hidden;
+    }
+
+    #documentation-root,
+    #documentation-root * {
+      visibility: visible;
+    }
+
+    #documentation-root {
+      position: static;
+      inset: 0;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .doc-print-page {
+      page-break-after: always;
+    }
+
+    .doc-print-page:last-child {
+      page-break-after: auto;
+    }
+  }
 }

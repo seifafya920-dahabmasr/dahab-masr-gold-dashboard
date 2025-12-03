@@ -89,9 +89,12 @@ const Documentation = () => {
   }
 
   return (
-    <div className="space-y-6 animate-fade-in max-w-5xl">
-      {/* Header */}
-      <div className="flex items-center justify-between">
+    <div
+      id="documentation-root"
+      className="space-y-6 animate-fade-in max-w-5xl print:mx-auto"
+    >
+      {/* Header (PDF Page 1) */}
+      <div className="flex items-center justify-between doc-print-page">
         <div className="flex items-center gap-4">
           <Button
             variant="ghost"
@@ -125,8 +128,8 @@ const Documentation = () => {
         </div>
       </div>
 
-      {/* Section 1: Getting Tokens */}
-      <Card className="border-border shadow-elegant">
+      {/* Section 1: Getting Tokens (PDF Page 2) */}
+      <Card className="border-border shadow-elegant doc-print-page">
         <CardHeader>
           <CardTitle className="font-display text-xl">
             1. Getting Tokens
@@ -193,8 +196,8 @@ const Documentation = () => {
         </CardContent>
       </Card>
 
-      {/* Section 2: Getting Prices */}
-      <Card className="border-border shadow-elegant">
+      {/* Section 2: Getting Prices (PDF Page 3) */}
+      <Card className="border-border shadow-elegant doc-print-page">
         <CardHeader>
           <CardTitle className="font-display text-xl">
             2. Getting Prices
@@ -260,8 +263,8 @@ const Documentation = () => {
         </CardContent>
       </Card>
 
-      {/* Section 3: Regenerating Access Token */}
-      <Card className="border-border shadow-elegant">
+      {/* Section 3: Regenerating Access Token (PDF Page 4) */}
+      <Card className="border-border shadow-elegant doc-print-page">
         <CardHeader>
           <CardTitle className="font-display text-xl">
             3. Regenerating Access Token
