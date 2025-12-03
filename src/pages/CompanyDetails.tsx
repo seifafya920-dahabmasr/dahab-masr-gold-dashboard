@@ -37,7 +37,7 @@ const MarkupCard = ({
     <CardContent className="pt-6">
       <p className="text-sm font-body text-muted-foreground mb-1">{title}</p>
       <p className={`text-3xl font-display font-bold ${type === "gold" ? "text-gold" : "text-foreground"}`}>
-        {value}%
+        {value} LE
       </p>
     </CardContent>
   </Card>
@@ -84,7 +84,7 @@ const CompanyDetails = () => {
 
   const handleExport = () => {
     // Create CSV content
-    const headers = ["Gold Buy %", "Gold Sell %", "Silver Buy %", "Silver Sell %", "Timestamp", "Changed By"];
+    const headers = ["Gold Buy  LE", "Gold Sell  LE", "Silver Buy  LE", "Silver Sell  LE", "Timestamp", "Changed By"];
     const rows = company.markupHistory.map((entry) => [
       entry.goldBuy,
       entry.goldSell,
@@ -187,10 +187,10 @@ const CompanyDetails = () => {
             <Table>
               <TableHeader>
                 <TableRow className="bg-muted/50">
-                  <TableHead className="font-body font-semibold text-center">Gold Buy %</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Gold Sell %</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Silver Buy %</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Silver Sell %</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Gold Buy  LE</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Gold Sell  LE</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Silver Buy  LE</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Silver Sell  LE</TableHead>
                   <TableHead className="font-body font-semibold">Timestamp</TableHead>
                   <TableHead className="font-body font-semibold">Changed By</TableHead>
                 </TableRow>
@@ -199,16 +199,16 @@ const CompanyDetails = () => {
                 {filteredHistory.map((entry) => (
                   <TableRow key={entry.id} className="hover:bg-muted/30">
                     <TableCell className="text-center font-body text-gold font-semibold">
-                      {entry.goldBuy}%
+                      {entry.goldBuy} LE
                     </TableCell>
                     <TableCell className="text-center font-body text-gold font-semibold">
-                      {entry.goldSell}%
+                      {entry.goldSell} LE
                     </TableCell>
                     <TableCell className="text-center font-body text-muted-foreground">
-                      {entry.silverBuy}%
+                      {entry.silverBuy} LE
                     </TableCell>
                     <TableCell className="text-center font-body text-muted-foreground">
-                      {entry.silverSell}%
+                      {entry.silverSell} LE
                     </TableCell>
                     <TableCell className="font-body text-muted-foreground">
                       {new Date(entry.timestamp).toLocaleString()}
@@ -230,7 +230,7 @@ const CompanyDetails = () => {
           </DialogHeader>
           <div className="grid grid-cols-2 gap-4 py-4">
             <div className="space-y-2">
-              <Label className="font-body text-sm text-gold">Gold Buy %</Label>
+              <Label className="font-body text-sm text-gold">Gold Buy  LE</Label>
               <Input
                 type="number"
                 step="0.1"
@@ -242,7 +242,7 @@ const CompanyDetails = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label className="font-body text-sm text-gold">Gold Sell %</Label>
+              <Label className="font-body text-sm text-gold">Gold Sell  LE</Label>
               <Input
                 type="number"
                 step="0.1"
@@ -254,7 +254,7 @@ const CompanyDetails = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label className="font-body text-sm">Silver Buy %</Label>
+              <Label className="font-body text-sm">Silver Buy  LE</Label>
               <Input
                 type="number"
                 step="0.1"
@@ -266,7 +266,7 @@ const CompanyDetails = () => {
               />
             </div>
             <div className="space-y-2">
-              <Label className="font-body text-sm">Silver Sell %</Label>
+              <Label className="font-body text-sm">Silver Sell  LE</Label>
               <Input
                 type="number"
                 step="0.1"

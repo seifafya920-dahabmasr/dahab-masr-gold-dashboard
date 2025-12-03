@@ -4,6 +4,8 @@ export const mockCompanies: Company[] = [
   {
     id: "1",
     name: "Al-Fayed Jewelers",
+    // imageurl:
+    //   "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
       goldBuy: 2.5,
       goldSell: 3.0,
@@ -44,6 +46,8 @@ export const mockCompanies: Company[] = [
   {
     id: "2",
     name: "Cairo Gold Exchange",
+    // imageurl:
+    //   "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
       goldBuy: 3.0,
       goldSell: 3.5,
@@ -75,6 +79,8 @@ export const mockCompanies: Company[] = [
   {
     id: "3",
     name: "Luxor Precious Metals",
+    imageurl:
+      "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
       goldBuy: 2.0,
       goldSell: 2.5,
@@ -97,6 +103,8 @@ export const mockCompanies: Company[] = [
   {
     id: "4",
     name: "Alexandria Silver Co.",
+    imageurl:
+      "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
       goldBuy: 2.2,
       goldSell: 2.8,
@@ -128,6 +136,8 @@ export const mockCompanies: Company[] = [
   {
     id: "5",
     name: "Giza Gold Trading",
+    imageurl:
+      "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
       goldBuy: 2.8,
       goldSell: 3.2,
@@ -150,6 +160,8 @@ export const mockCompanies: Company[] = [
   {
     id: "6",
     name: "Nile Valley Metals",
+    imageurl:
+      "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
       goldBuy: 2.4,
       goldSell: 2.9,

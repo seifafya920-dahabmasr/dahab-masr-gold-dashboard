@@ -69,10 +69,10 @@ const Companies = () => {
               <TableHeader>
                 <TableRow className="bg-muted/50">
                   <TableHead className="font-body font-semibold">Company Name</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Gold Buy %</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Gold Sell %</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Silver Buy %</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Silver Sell %</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Gold Buy  LE</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Gold Sell  LE</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Silver Buy  LE</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Silver Sell  LE</TableHead>
                   <TableHead className="font-body font-semibold">Last Updated</TableHead>
                   <TableHead className="font-body font-semibold text-right">Actions</TableHead>
                 </TableRow>
@@ -88,16 +88,16 @@ const Companies = () => {
                       {company.name}
                     </TableCell>
                     <TableCell className="text-center font-body text-gold font-semibold">
-                      {company.currentMarkup.goldBuy}%
+                      {company.currentMarkup.goldBuy} LE
                     </TableCell>
                     <TableCell className="text-center font-body text-gold font-semibold">
-                      {company.currentMarkup.goldSell}%
+                      {company.currentMarkup.goldSell} LE
                     </TableCell>
                     <TableCell className="text-center font-body text-muted-foreground">
-                      {company.currentMarkup.silverBuy}%
+                      {company.currentMarkup.silverBuy} LE
                     </TableCell>
                     <TableCell className="text-center font-body text-muted-foreground">
-                      {company.currentMarkup.silverSell}%
+                      {company.currentMarkup.silverSell} LE
                     </TableCell>
                     <TableCell className="font-body text-muted-foreground">
                       {new Date(company.lastUpdated).toLocaleDateString()}

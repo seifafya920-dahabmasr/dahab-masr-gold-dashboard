@@ -21,4 +21,5 @@ export interface Company {
   currentMarkup: CompanyMarkup;
   lastUpdated: string;
   markupHistory: MarkupHistoryEntry[];
+  imageurl?: string;
 }

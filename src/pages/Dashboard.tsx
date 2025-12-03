@@ -1,6 +1,7 @@
 import { Building2, TrendingUp, TrendingDown, Activity } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { mockCompanies } from "@/data/mockData";
+import { useNavigate } from "react-router-dom";
 
 const stats = [
   {
@@ -34,6 +35,13 @@ const stats = [
 ];
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
+  
+  function handleCompanyId(company: { id: string }): void {
+    console.log("Company ID:", company.id);
+    navigate(`/companies/${company.id}`);
+  }
   return (
     <div className="space-y-8 animate-fade-in">
       <div>
@@ -74,19 +82,23 @@ const Dashboard = () => {
       {/* Recent Companies */}
       <Card className="border-border shadow-elegant">
         <CardHeader>
-          <CardTitle className="font-display text-xl">Recent Companies</CardTitle>
+          <CardTitle className="font-display text-xl">
+            Recent Companies
+          </CardTitle>
         </CardHeader>
         <CardContent>
           <div className="space-y-4">
             {mockCompanies.slice(0, 5).map((company) => (
               <div
                 key={company.id}
-                className="flex items-center justify-between p-4 rounded-lg bg-muted/50 hover:bg-muted transition-colors"
+                className="flex items-center justify-between p-4 rounded-lg bg-muted/20 hover:bg-muted/50 transition-colors"
+                onClick={() => handleCompanyId({ id: company.id })}
               >
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full gradient-gold flex items-center justify-center">
-                    <Building2 className="w-5 h-5 text-primary-foreground" />
-                  </div>
+                  <img
+                    src={company.imageurl ?? "/placeholder-dm.png"}
+                    className="w-12 contain rounded-sm"
+                  ></img>
                   <div>
                     <p className="font-body font-medium text-foreground">
                       {company.name}
@@ -102,7 +114,8 @@ const Dashboard = () => {
                     Gold Markup
                   </p>
                   <p className="font-display font-semibold text-gold">
-                    {company.currentMarkup.goldBuy}% / {company.currentMarkup.goldSell}%
+                    {company.currentMarkup.goldBuy} LE |{" "}
+                    {company.currentMarkup.goldSell} LE
                   </p>
                 </div>
               </div>
