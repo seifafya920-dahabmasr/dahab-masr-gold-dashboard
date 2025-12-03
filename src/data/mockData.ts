@@ -5,6 +5,11 @@ export const mockCompanies: Company[] = [
   {
     id: "1",
     name: "Al-Fayed Jewelers",
+    createdAt: "2025-01-01T09:00:00Z",
+    createdById: "u1",
+    createdByName: "Admin User",
+    companyStatus: "Active",
+    cooperationType: "Both",
     // imageurl:
     //   "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
@@ -47,6 +52,11 @@ export const mockCompanies: Company[] = [
   {
     id: "2",
     name: "Cairo Gold Exchange",
+    createdAt: "2025-01-03T12:00:00Z",
+    createdById: "u1",
+    createdByName: "Admin User",
+    companyStatus: "Active",
+    cooperationType: "Both",
     // imageurl:
     //   "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
@@ -80,6 +90,11 @@ export const mockCompanies: Company[] = [
   {
     id: "3",
     name: "Luxor Precious Metals",
+    createdAt: "2025-01-05T10:00:00Z",
+    createdById: "u1",
+    createdByName: "Admin User",
+    companyStatus: "Active",
+    cooperationType: "Both",
     imageurl:
       "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
@@ -104,6 +119,11 @@ export const mockCompanies: Company[] = [
   {
     id: "4",
     name: "Alexandria Silver Co.",
+    createdAt: "2025-01-07T15:30:00Z",
+    createdById: "u2",
+    createdByName: "Ahmed Hassan",
+    companyStatus: "Active",
+    cooperationType: "Both",
     imageurl:
       "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
@@ -137,6 +157,11 @@ export const mockCompanies: Company[] = [
   {
     id: "5",
     name: "Giza Gold Trading",
+    createdAt: "2025-01-09T11:15:00Z",
+    createdById: "u3",
+    createdByName: "Sara Ahmed",
+    companyStatus: "Active",
+    cooperationType: "Both",
     imageurl:
       "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
@@ -161,6 +186,11 @@ export const mockCompanies: Company[] = [
   {
     id: "6",
     name: "Nile Valley Metals",
+    createdAt: "2025-01-10T08:45:00Z",
+    createdById: "u1",
+    createdByName: "Admin User",
+    companyStatus: "Closed",
+    cooperationType: "Both",
     imageurl:
       "https://egypt.gold-era.com/wp-content/uploads/2022/09/Gold-Era-logo-gold-.ai-200-x-100-px.png",
     currentMarkup: {
@@ -189,6 +219,7 @@ export const mockUsers: User[] = [
     id: "u1",
     name: "Admin User",
     email: "admin@dahabmasr.com",
+    companyId: undefined,
     created_at: "2025-01-01T09:00:00Z",
     createdById: "u1",
     createdByName: "System",
@@ -199,6 +230,7 @@ export const mockUsers: User[] = [
     id: "u2",
     name: "Ahmed Hassan",
     email: "ahmed.hassan@dahabmasr.com",
+    companyId: "1",
     created_at: "2025-01-05T11:15:00Z",
     createdById: "u1",
     createdByName: "Admin User",
@@ -209,6 +241,7 @@ export const mockUsers: User[] = [
     id: "u3",
     name: "Sara Ahmed",
     email: "sara.ahmed@dahabmasr.com",
+    companyId: "2",
     created_at: "2025-01-08T14:30:00Z",
     createdById: "u1",
     createdByName: "Admin User",
@@ -219,6 +252,7 @@ export const mockUsers: User[] = [
     id: "u4",
     name: "Mohamed Ali",
     email: "mohamed.ali@dahabmasr.com",
+    companyId: "1",
     created_at: "2025-01-10T16:45:00Z",
     createdById: "u2",
     createdByName: "Ahmed Hassan",

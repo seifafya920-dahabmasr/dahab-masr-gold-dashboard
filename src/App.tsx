@@ -13,6 +13,7 @@ import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
 import Users from "./pages/Users";
 import UserDetails from "./pages/UserDetails";
+import Documentation from "./pages/Documentation";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,7 @@ const App = () => (
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/companies" element={<Companies />} />
             <Route path="/companies/:id" element={<CompanyDetails />} />
+            <Route path="/documentation/:companyId" element={<Documentation />} />
             <Route path="/users" element={<Users />} />
             <Route path="/users/:id" element={<UserDetails />} />
             <Route path="/markup-history" element={<MarkupHistory />} />

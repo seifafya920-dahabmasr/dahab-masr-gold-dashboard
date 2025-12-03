@@ -6,6 +6,7 @@ export interface User {
   id: string;
   name: string;
   email: string;
+  companyId?: string;
   created_at: string;
   createdById: string;
   createdByName: string;

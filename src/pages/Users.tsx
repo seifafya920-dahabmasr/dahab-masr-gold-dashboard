@@ -44,6 +44,7 @@ interface FormState {
   email: string;
   accountType: AccountType | "";
   accountStatus: AccountStatus | "";
+  password: string;
 }
 
 const initialFormState: FormState = {
@@ -51,6 +52,7 @@ const initialFormState: FormState = {
   email: "",
   accountType: "",
   accountStatus: "",
+  password: "",
 };
 
 const Users = () => {
@@ -80,6 +82,7 @@ const Users = () => {
       email: user.email,
       accountType: user.accountType,
       accountStatus: user.accountStatus,
+      password: "",
     });
     setIsModalOpen(true);
   };
@@ -111,6 +114,15 @@ const Users = () => {
       toast({
         title: "Invalid email",
         description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (mode === "create" && !form.password.trim()) {
+      toast({
+        title: "Missing password",
+        description: "Password is required when creating a new user.",
         variant: "destructive",
       });
       return;
@@ -375,6 +387,19 @@ const Users = () => {
                 value={form.email}
                 onChange={(e) =>
                   setForm((f) => ({ ...f, email: e.target.value }))
+                }
+                className="font-body"
+              />
+            </div>
+            <div className="space-y-2">
+              <Label className="font-body text-sm">
+                Password{mode === "create" ? "" : " (leave blank to keep current)"}
+              </Label>
+              <Input
+                type="password"
+                value={form.password}
+                onChange={(e) =>
+                  setForm((f) => ({ ...f, password: e.target.value }))
                 }
                 className="font-body"
               />
