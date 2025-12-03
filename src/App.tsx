@@ -11,6 +11,8 @@ import CompanyDetails from "./pages/CompanyDetails";
 import MarkupHistory from "./pages/MarkupHistory";
 import Settings from "./pages/Settings";
 import NotFound from "./pages/NotFound";
+import Users from "./pages/Users";
+import UserDetails from "./pages/UserDetails";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,8 @@ const App = () => (
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/companies" element={<Companies />} />
             <Route path="/companies/:id" element={<CompanyDetails />} />
+            <Route path="/users" element={<Users />} />
+            <Route path="/users/:id" element={<UserDetails />} />
             <Route path="/markup-history" element={<MarkupHistory />} />
             <Route path="/settings" element={<Settings />} />
           </Route>

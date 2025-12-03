@@ -1,4 +1,5 @@
 import { Company } from "@/types/company";
+import { User } from "@/types/user";
 
 export const mockCompanies: Company[] = [
   {
@@ -180,5 +181,48 @@ export const mockCompanies: Company[] = [
         changedBy: "Hassan Mostafa",
       },
     ],
+  },
+];
+
+export const mockUsers: User[] = [
+  {
+    id: "u1",
+    name: "Admin User",
+    email: "admin@dahabmasr.com",
+    created_at: "2025-01-01T09:00:00Z",
+    createdById: "u1",
+    createdByName: "System",
+    accountType: "Admin",
+    accountStatus: "Active",
+  },
+  {
+    id: "u2",
+    name: "Ahmed Hassan",
+    email: "ahmed.hassan@dahabmasr.com",
+    created_at: "2025-01-05T11:15:00Z",
+    createdById: "u1",
+    createdByName: "Admin User",
+    accountType: "Employee",
+    accountStatus: "Active",
+  },
+  {
+    id: "u3",
+    name: "Sara Ahmed",
+    email: "sara.ahmed@dahabmasr.com",
+    created_at: "2025-01-08T14:30:00Z",
+    createdById: "u1",
+    createdByName: "Admin User",
+    accountType: "Employee",
+    accountStatus: "Active",
+  },
+  {
+    id: "u4",
+    name: "Mohamed Ali",
+    email: "mohamed.ali@dahabmasr.com",
+    created_at: "2025-01-10T16:45:00Z",
+    createdById: "u2",
+    createdByName: "Ahmed Hassan",
+    accountType: "Employee",
+    accountStatus: "Closed",
   },
 ];

@@ -1,11 +1,12 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { LayoutDashboard, Building2, History, Settings, LogOut } from "lucide-react";
+import { LayoutDashboard, Building2, History, Settings, LogOut, Users as UsersIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "@/assets/dahab-masr-logo.png";
 
 const menuItems = [
   { icon: LayoutDashboard, label: "Dashboard", path: "/dashboard" },
   { icon: Building2, label: "Companies", path: "/companies" },
+  { icon: UsersIcon, label: "Users", path: "/users" },
   { icon: History, label: "Markup History", path: "/markup-history" },
   { icon: Settings, label: "Settings", path: "/settings" },
 ];
