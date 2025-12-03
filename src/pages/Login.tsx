@@ -110,7 +110,7 @@ const Login = () => {
 
         {/* Footer */}
         <p className="text-center text-gold-muted/50 text-xs mt-8 font-body">
-          © 2024 Dahab Masr. All rights reserved.
+          © 2025 Dahab Masr. All rights reserved.
         </p>
       </div>
     </div>

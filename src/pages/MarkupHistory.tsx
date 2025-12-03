@@ -61,7 +61,7 @@ const MarkupHistory = () => {
   });
 
   const handleExport = () => {
-    const headers = ["Company", "Gold Buy %", "Gold Sell %", "Silver Buy %", "Silver Sell %", "Timestamp", "Changed By"];
+    const headers = ["Company", "Gold Buy  LE", "Gold Sell  LE", "Silver Buy  LE", "Silver Sell  LE", "Timestamp", "Changed By"];
     const rows = filteredHistory.map((entry) => [
       entry.companyName,
       entry.goldBuy,
@@ -150,10 +150,10 @@ const MarkupHistory = () => {
               <TableHeader>
                 <TableRow className="bg-muted/50">
                   <TableHead className="font-body font-semibold">Company</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Gold Buy %</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Gold Sell %</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Silver Buy %</TableHead>
-                  <TableHead className="font-body font-semibold text-center">Silver Sell %</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Gold Buy  LE</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Gold Sell  LE</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Silver Buy  LE</TableHead>
+                  <TableHead className="font-body font-semibold text-center">Silver Sell  LE</TableHead>
                   <TableHead className="font-body font-semibold">Timestamp</TableHead>
                   <TableHead className="font-body font-semibold">Changed By</TableHead>
                 </TableRow>
@@ -163,16 +163,16 @@ const MarkupHistory = () => {
                   <TableRow key={`${entry.companyId}-${index}`} className="hover:bg-muted/30">
                     <TableCell className="font-body font-medium">{entry.companyName}</TableCell>
                     <TableCell className="text-center font-body text-gold font-semibold">
-                      {entry.goldBuy}%
+                      {entry.goldBuy} LE
                     </TableCell>
                     <TableCell className="text-center font-body text-gold font-semibold">
-                      {entry.goldSell}%
+                      {entry.goldSell} LE
                     </TableCell>
                     <TableCell className="text-center font-body text-muted-foreground">
-                      {entry.silverBuy}%
+                      {entry.silverBuy} LE
                     </TableCell>
                     <TableCell className="text-center font-body text-muted-foreground">
-                      {entry.silverSell}%
+                      {entry.silverSell} LE
                     </TableCell>
                     <TableCell className="font-body text-muted-foreground">
                       {new Date(entry.timestamp).toLocaleString()}

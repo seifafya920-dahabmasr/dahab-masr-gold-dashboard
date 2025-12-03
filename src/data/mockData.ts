@@ -12,7 +12,7 @@ export const mockCompanies: Company[] = [
       silverBuy: 1.5,
       silverSell: 2.0,
     },
-    lastUpdated: "2024-01-15T10:30:00Z",
+    lastUpdated: "2025-01-15T10:30:00Z",
     markupHistory: [
       {
         id: "h1",
@@ -20,7 +20,7 @@ export const mockCompanies: Company[] = [
         goldSell: 3.0,
         silverBuy: 1.5,
         silverSell: 2.0,
-        timestamp: "2024-01-15T10:30:00Z",
+        timestamp: "2025-01-15T10:30:00Z",
         changedBy: "Ahmed Hassan",
       },
       {
@@ -29,7 +29,7 @@ export const mockCompanies: Company[] = [
         goldSell: 2.5,
         silverBuy: 1.0,
         silverSell: 1.5,
-        timestamp: "2024-01-10T14:20:00Z",
+        timestamp: "2025-01-10T14:20:00Z",
         changedBy: "Mohamed Ali",
       },
       {
@@ -38,7 +38,7 @@ export const mockCompanies: Company[] = [
         goldSell: 2.2,
         silverBuy: 0.8,
         silverSell: 1.2,
-        timestamp: "2024-01-05T09:15:00Z",
+        timestamp: "2025-01-05T09:15:00Z",
         changedBy: "Ahmed Hassan",
       },
     ],
@@ -54,7 +54,7 @@ export const mockCompanies: Company[] = [
       silverBuy: 2.0,
       silverSell: 2.5,
     },
-    lastUpdated: "2024-01-14T16:45:00Z",
+    lastUpdated: "2025-01-14T16:45:00Z",
     markupHistory: [
       {
         id: "h4",
@@ -62,7 +62,7 @@ export const mockCompanies: Company[] = [
         goldSell: 3.5,
         silverBuy: 2.0,
         silverSell: 2.5,
-        timestamp: "2024-01-14T16:45:00Z",
+        timestamp: "2025-01-14T16:45:00Z",
         changedBy: "Sara Ahmed",
       },
       {
@@ -71,7 +71,7 @@ export const mockCompanies: Company[] = [
         goldSell: 3.2,
         silverBuy: 1.8,
         silverSell: 2.2,
-        timestamp: "2024-01-08T11:30:00Z",
+        timestamp: "2025-01-08T11:30:00Z",
         changedBy: "Omar Farouk",
       },
     ],
@@ -87,7 +87,7 @@ export const mockCompanies: Company[] = [
       silverBuy: 1.0,
       silverSell: 1.5,
     },
-    lastUpdated: "2024-01-13T09:00:00Z",
+    lastUpdated: "2025-01-13T09:00:00Z",
     markupHistory: [
       {
         id: "h6",
@@ -95,7 +95,7 @@ export const mockCompanies: Company[] = [
         goldSell: 2.5,
         silverBuy: 1.0,
         silverSell: 1.5,
-        timestamp: "2024-01-13T09:00:00Z",
+        timestamp: "2025-01-13T09:00:00Z",
         changedBy: "Fatima Nasser",
       },
     ],
@@ -111,7 +111,7 @@ export const mockCompanies: Company[] = [
       silverBuy: 1.8,
       silverSell: 2.3,
     },
-    lastUpdated: "2024-01-12T14:30:00Z",
+    lastUpdated: "2025-01-12T14:30:00Z",
     markupHistory: [
       {
         id: "h7",
@@ -119,7 +119,7 @@ export const mockCompanies: Company[] = [
         goldSell: 2.8,
         silverBuy: 1.8,
         silverSell: 2.3,
-        timestamp: "2024-01-12T14:30:00Z",
+        timestamp: "2025-01-12T14:30:00Z",
         changedBy: "Youssef Ibrahim",
       },
       {
@@ -128,7 +128,7 @@ export const mockCompanies: Company[] = [
         goldSell: 2.5,
         silverBuy: 1.5,
         silverSell: 2.0,
-        timestamp: "2024-01-07T10:00:00Z",
+        timestamp: "2025-01-07T10:00:00Z",
         changedBy: "Ahmed Hassan",
       },
     ],
@@ -144,7 +144,7 @@ export const mockCompanies: Company[] = [
       silverBuy: 1.6,
       silverSell: 2.1,
     },
-    lastUpdated: "2024-01-11T11:15:00Z",
+    lastUpdated: "2025-01-11T11:15:00Z",
     markupHistory: [
       {
         id: "h9",
@@ -152,7 +152,7 @@ export const mockCompanies: Company[] = [
         goldSell: 3.2,
         silverBuy: 1.6,
         silverSell: 2.1,
-        timestamp: "2024-01-11T11:15:00Z",
+        timestamp: "2025-01-11T11:15:00Z",
         changedBy: "Layla Mahmoud",
       },
     ],
@@ -168,7 +168,7 @@ export const mockCompanies: Company[] = [
       silverBuy: 1.4,
       silverSell: 1.9,
     },
-    lastUpdated: "2024-01-10T08:45:00Z",
+    lastUpdated: "2025-01-10T08:45:00Z",
     markupHistory: [
       {
         id: "h10",
@@ -176,7 +176,7 @@ export const mockCompanies: Company[] = [
         goldSell: 2.9,
         silverBuy: 1.4,
         silverSell: 1.9,
-        timestamp: "2024-01-10T08:45:00Z",
+        timestamp: "2025-01-10T08:45:00Z",
         changedBy: "Hassan Mostafa",
       },
     ],
